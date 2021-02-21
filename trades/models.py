@@ -18,3 +18,7 @@ class Trades(models.Model):
 
     def __str__(self):
         return self.symbol
+
+class Test():
+    """Test class for git compare"""
+    pass
