@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from trades import views
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'api/trades/$', views.trades_list),
+    url(r'api/trades/(?P<pk>[0-9]+)$', views.trades_detail),
 ]
